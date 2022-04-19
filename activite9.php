@@ -8,5 +8,5 @@ for ($i=0; $i < count($suite); $i++) {
         
     }
 }
-print_r($deck[$x]) ;
+print_r($deck[]) ;
         echo "<br>";
