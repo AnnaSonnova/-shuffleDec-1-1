@@ -8,17 +8,27 @@ for ($i=0; $i < count($suite); $i++) {
         
     }
 }
-echo ("<pre>");
-print_r($deck);
-echo ("<pre>");
 $subdec1 = array_slice( $deck, 0, 26);
 $subdec2 = array_slice( $deck, 26);
 
-print_r ($subdec1);
-print_r ($subdec2);
 $shuffleDec = [];
 for ($k=0; $k<= 25; $k++) {
     $shuffleDec[] = $subdec1[$k];
     $shuffleDec[] = $subdec2[$k];
 }
-print_r ($shuffleDec);
+for ($i = 0; $i< count($shuffleDec); $i++){
+    echo $shuffleDec[$i];
+        
+    if (($i+1)%13 ==0 && $i!= 0) {
+        echo "<br>";
+        
+    }
+}
+echo "<br>";
+for ($i = 0; $i< count($deck); $i++){
+    echo $deck[$i];
+        
+    if (($i+1)%13 ==0 && $i!= 0) {
+        echo "<br>";
+    }
+}
